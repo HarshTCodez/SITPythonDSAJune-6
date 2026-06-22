@@ -5,7 +5,6 @@ Notes and code for each day of the training.
 | Day | Topics | Notes |
 |-----|--------|-------|
 | 1 | Logic puzzles, pattern printing, swapping, `range()`, digit & number problems, prime, factors | [day_01/](day_01/) |
-| 2 | *(planned)* | [day_02/day_02.md](day_02/day_02.md) |
 
 ## Day 1 files
 
