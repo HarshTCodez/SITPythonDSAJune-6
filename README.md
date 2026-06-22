@@ -10,7 +10,7 @@ for beginners. Each day has notes (logic + explanations) and runnable Python cod
 └── course/
     ├── README.md          # day-wise index
     ├── day_01/
-    │   ├── day_01.md      # notes: logic + code for the day
+    │   ├── README.md      # notes: logic + code for the day
     │   └── *.py           # runnable Python files
     └── day_02/
         └── day_02.md      # planned topics

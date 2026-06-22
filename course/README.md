@@ -4,14 +4,14 @@ Notes and code for each day of the training.
 
 | Day | Topics | Notes |
 |-----|--------|-------|
-| 1 | Logic puzzles, pattern printing, swapping, `range()`, digit & number problems, prime, factors | [day_01/day_01.md](day_01/day_01.md) |
+| 1 | Logic puzzles, pattern printing, swapping, `range()`, digit & number problems, prime, factors | [day_01/](day_01/) |
 | 2 | *(planned)* | [day_02/day_02.md](day_02/day_02.md) |
 
 ## Day 1 files
 
 | File | What it covers |
 |------|----------------|
-| [day_01/day_01.md](day_01/day_01.md) | Full notes — all logic + code |
+| [day_01/README.md](day_01/README.md) | Full notes — all logic + code |
 | [day_01/toffee.py](day_01/toffee.py) | Toffee & wrappers simulation (→ 74) |
 | [day_01/egg_drop.py](day_01/egg_drop.py) | 2 eggs / 100 floors, √n strategy |
 | [day_01/patterns.py](day_01/patterns.py) | All 6 patterns as functions |
