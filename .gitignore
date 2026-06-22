@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# kept locally, not part of the repo
+15-Day Python + DSA Training Program.md
