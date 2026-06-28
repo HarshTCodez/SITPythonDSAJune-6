@@ -1,0 +1,10 @@
+- two sum 2
+- 3sum
+- merge two sorted arrays
+- product of array except itself
+- rain water trapping as homework
+- kadane's algorithm
+- basic of binary search
+- square root of x
+- lower bound / upper bound
+- peak element in the mountain

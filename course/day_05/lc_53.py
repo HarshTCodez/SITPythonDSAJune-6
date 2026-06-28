@@ -1,0 +1,28 @@
+# Kadane's Algorithm
+
+
+class Solution:
+    def maxSubArray(self, arr: List[int]) -> int:
+        current_sum = arr[0]
+        max_sum = arr[0]
+
+        for i in range(1, len(arr)):
+            if current_sum < 0:
+                current_sum = arr[i]
+            else:
+                current_sum += arr[i]
+
+            if current_sum > max_sum:
+                max_sum = current_sum
+
+        return max_sum
+
+
+class Solution:
+    def maxSubArray(self, arr: List[int]) -> int:
+        current_sum = arr[0]
+        max_sum = arr[0]
+        for i in range(1, len(arr)):
+            current_sum = max(arr[i], current_sum + arr[i])
+            max_sum = max(current_sum, max_sum)
+        return max_sum
