@@ -1,0 +1,30 @@
+def fill(matrix: list[list[int]], start_row, start_col, original_color, new_color):
+    # out of bounds
+    if start_row < 0 or start_col < 0:
+        return
+    # out of bounds
+    if start_row >= len(matrix) or start_col >= len(matrix[0]):
+        return
+    # already filled the color
+    if matrix[start_row][start_col] == new_color:
+        return
+    # not the original_color
+    if matrix[start_row][start_col] != original_color:
+        return
+
+    # make it new color
+    matrix[start_row][start_col] = new_color
+
+    # traverse down -> up -> right -> left
+    fill(matrix, start_row + 1, start_col, original_color, new_color)
+    fill(matrix, start_row - 1, start_col, original_color, new_color)
+    fill(matrix, start_row, start_col + 1, original_color, new_color)
+    fill(matrix, start_row, start_col - 1, original_color, new_color)
+
+
+class Solution:
+    def floodFill(
+        self, image: List[List[int]], sr: int, sc: int, color: int
+    ) -> List[List[int]]:
+        fill(image, sr, sc, image[sr][sc], color)
+        return image
