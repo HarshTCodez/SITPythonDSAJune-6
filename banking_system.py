@@ -1,10 +1,12 @@
 class Account:
     PIN_LENGTH = 4
+    BANK_NAME = "Kotak Bank"
 
     __account_number: str
     __name: str
     __pin: str
     __balance: int
+    __transactions: list
 
     @staticmethod
     def validate_account_number(account_number: str):
@@ -54,6 +56,7 @@ class Account:
         self.__set_pin(pin)
         self.name = name
         self.__balance = 0
+        self.__transactions = []
 
     @property
     def account_number(self):
@@ -72,6 +75,10 @@ class Account:
         Account.validate_name(val)
         self.__name = val
 
+    @property
+    def transcations(self):
+        return self.__transactions
+
     def verify_pin(self, password):
         if password == self.__pin:
             return True
@@ -80,6 +87,7 @@ class Account:
     def add_deposit(self, amount):
         Account.validate_amount(amount)
         self.__balance += amount
+        self.__transactions.append((amount, "CREDIT"))
 
     def withdraw(self, pin, amount):
         if not self.verify_pin(pin):
@@ -88,6 +96,7 @@ class Account:
         if amount > self.__balance:
             raise ValueError("Account doesn't have that much money.")
         self.__balance -= amount
+        self.__transactions.append((amount, "DEBIT"))
 
 
 acc1 = Account(
@@ -107,3 +116,4 @@ acc1.add_deposit(100_000)
 print(acc1.balance)
 acc1.withdraw("1234", 12000)
 print(acc1.balance)
+print(acc1.transcations)
