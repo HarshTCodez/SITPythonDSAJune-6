@@ -98,22 +98,10 @@ class Account:
         self.__balance -= amount
         self.__transactions.append((amount, "DEBIT"))
 
+    def change_pin(self, old_pin, new_pin):
+        if not self.verify_pin(old_pin):
+            raise ValueError("You've entered the wrong pin")
+        self.__set_pin(new_pin)
 
-acc1 = Account(
-    "1234",
-    "Anmol Jhamb",
-    "1234",
-)
-print(acc1)
-print(acc1.account_number)
-print(acc1.name)
-
-# acc1.__set_account_number(123) # will not work!!
-
-print(acc1.verify_pin("1234"))
-print(acc1.balance)
-acc1.add_deposit(100_000)
-print(acc1.balance)
-acc1.withdraw("1234", 12000)
-print(acc1.balance)
-print(acc1.transcations)
+    def __str__(self):
+        return f"Name:{self.name}\nAccount Number: {self.account_number}"
